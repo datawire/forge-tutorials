@@ -15,6 +15,14 @@
       "text": "finish.md"
     }
   },
+  "assets": {
+    "client": [
+      {
+        "file": "env-init.sh",
+        "target": "~/"
+      }
+    ]
+  },
   "environment": {
     "uilayout": "terminal"
   },

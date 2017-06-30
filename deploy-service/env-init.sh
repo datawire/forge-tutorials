@@ -1,4 +1,3 @@
-#!/usr/bin/env sh
 apt-get install -y python-minimal python-pip
 pip install virtualenv
 curl -sL https://raw.githubusercontent.com/datawire/forge/master/install.sh | INSTALL_DIR=${HOME}/forge sh

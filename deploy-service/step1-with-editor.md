@@ -4,8 +4,16 @@ A container contains 1) a compiled version of your source code and 2) any/all ru
 
 In this tutorial, we're going to use Docker as our container format. We've created a simple web application in Python, the `hello-webapp`. To package the webapp as a Docker container, we create a `Dockerfile`.
 
-We've created a `Dockerfile` for you, so just type to see its contents:
-
-`cat hello-forge/Dockerfile`{{execute}}
+<pre class="file" data-filename="Dockerfile" data-target="replace"># Run server
+FROM alpine:3.5
+RUN apk add --no-cache python py2-pip py2-gevent
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . /app
+WORKDIR /app
+EXPOSE 8080
+ENTRYPOINT ["python"]
+CMD ["app.py"]
+</pre>
 
 The first line defines our base image.

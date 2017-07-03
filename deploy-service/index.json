@@ -19,7 +19,7 @@
     "Dockerfile"
   ],
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "kubernetes"

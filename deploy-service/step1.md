@@ -7,8 +7,7 @@ What's in a container?
 
 In this tutorial, we're going to use Docker as our container format. We've created a simple web application in Python, the `hello-webapp`. To package the webapp as a Docker container, we create a `Dockerfile`.
 
-<pre class="file" data-filename="Dockerfile" data-target="replace">
-# Run server
+<pre class="file" data-filename="Dockerfile" data-target="replace"># Run server
 FROM alpine:3.5
 RUN apk add --no-cache python py2-pip py2-gevent
 COPY requirements.txt .

@@ -15,6 +15,9 @@
       "text": "finish.md"
     }
   },
+  "files": [
+    "Dockerfile"
+  ],
   "assets": {
     "client": [
       {

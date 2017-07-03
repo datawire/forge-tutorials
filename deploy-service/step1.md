@@ -8,4 +8,10 @@ We've created a `Dockerfile` for you, so just type to see its contents:
 
 `cat hello-forge/Dockerfile`{{execute}}
 
-The first line defines our base image.
+This Dockerfile starts with the base image (Alpine:3.5), installs the necessary Python dependencies for the webapp, exposes a port for the webapp on the container, and then specifies the command to run when the container starts.
+
+You can build the Docker container manually with this command:
+
+`docker build -t hello-webapp:v1 .`{{execute}}
+
+This command reads the `Dockerfile`, and then builds a binary image that contains everything necessary for the webapp to run.

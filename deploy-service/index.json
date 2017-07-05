@@ -7,7 +7,7 @@
       { "title": "Running your containerized service", "text": "step2.md" },
       { "title": "Kubernetes and manifests", "text": "step3.md" },
       { "title": "The Container Registry", "text": "step4.md" },
-      { "title": "Running the service in Kubernetes", "text": "step5.md" }
+      { "title": "Running the service in Kubernetes", "text": "step5.md" },
       { "title": "Get a service running, faster", "text": "step6.md" }
     ],
     "intro": {

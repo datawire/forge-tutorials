@@ -16,5 +16,3 @@ You can build the Docker container manually with this command:
 `docker build -t hello-webapp:v1 .`{{execute}}
 
 This command reads the `Dockerfile`, and then builds a binary image that contains everything necessary for the webapp to run.
-
-`docker run -d -p 80:8080 hello-webapp:v1`{{execute}}

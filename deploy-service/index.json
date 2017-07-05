@@ -4,8 +4,8 @@
   "details": {
     "steps": [
       { "title": "The container", "text": "step1.md" },
-      { "title": "Goes", "text": "step2.md" },
-      { "title": "Here", "text": "step3.md" }
+      { "title": "Running your containerized service", "text": "step2.md" },
+      { "title": "Kubernetes", "text": "step3.md" }
     ],
     "intro": {
       "text": "intro.md",

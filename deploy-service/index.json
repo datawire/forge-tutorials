@@ -1,6 +1,6 @@
 {
   "title": "Deploying a service onto Kubernetes",
-  "description": "Learning how to educate via Katacoda",
+  "description": "How to get your source code running in Kubernetes",
   "details": {
     "steps": [
       { "title": "The container", "text": "step1.md" },

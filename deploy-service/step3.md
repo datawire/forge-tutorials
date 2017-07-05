@@ -8,7 +8,7 @@ We've created a Kubernetes manifest file for the hello-webapp service.
 
 `cat deployment.yaml`{{execute}}
 
-You can see that the manifest is written in YAML, and contains a cornucopia of information about how your container should be run.
+You can see that the manifest is written in YAML, and contains some key bits of information about your service, including a pointer to the Docker image, memory/CPU limits, and ports exposed.
 
 So now we have 1) the code to be run, in a container and 2) the runtime configuration of how to run the code, in the Kubernetes manifest.
 

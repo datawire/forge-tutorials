@@ -6,7 +6,8 @@ In this tutorial, we're going to use Docker as our container format. We've creat
 
 We've created a `Dockerfile` for you, so just type to see its contents:
 
-`cd hello-forge`{{execute}}
+`cd hello-webapp`{{execute}}
+
 `cat Dockerfile`{{execute}}
 
 This Dockerfile starts with the base image (Alpine:3.5), installs the necessary Python dependencies for the webapp, exposes a port for the webapp on the container, and then specifies the command to run when the container starts.

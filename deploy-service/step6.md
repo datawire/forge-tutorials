@@ -17,3 +17,5 @@ Forge will automatically build your Docker container (based on your `Dockerfile`
 Now, if we just send a request to our container, we'll see that we have a new welcome message:
 
 `curl $WEBAPP_IP`
+
+Congratulations! You've applied the basic concepts necessary for you to develop and deploy source code into Kubernetes.

@@ -1,18 +1,20 @@
-Now, let's actually get this service running in Kubernetes. We're going to need to update our `deployment.yaml` file to point to our particular service. For the purposes of this exercise, we've templated our deployment file with the variable IMAGE_URL, which we'll then instantiate with a `sed` command:
+Now, let's actually get this service running in Kubernetes. We're going to need to update our `deployment.yaml` file to point to the image for our particular service. For the purposes of this exercise, we've templated our deployment file with the variable IMAGE_URL, which we'll then instantiate with a `sed` command:
 
 `sed -i -e 's@IMAGE_URL@'"registry.hub.docker.com/$DOCKER_USER/hello-webapp:v1"'@' deployment.yaml`{{execute}}
 
-Now, we can run `kubectl` to actually get the service running:
+(f you run `cat deployment.yaml`{{execute}} you'll see that your specific Docker repository is now in the `deployment.yaml` file.)
+
+Now, we can run actually get the service running:
 
 `kubectl apply -f deployment.yaml`{{execute}}
 
-We're telling Kubernetes to actually process the information in `deployment.yaml`.
+We're telling Kubernetes to actually process the information in the manifest.
 
 We can see the services running:
 
 `kubectl get services`{{execute}}
 
-And then if we `curl` to the EXTERNAL-IP address listed for the `hello-webapp`:
+And then if we send an HTTP request to the EXTERNAL-IP address listed for the `hello-webapp`:
 
 `curl $WEBAPP_IP`{{execute}}
 

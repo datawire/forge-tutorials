@@ -10,7 +10,7 @@ We've also explored ways to automate the process (via Forge).
 
 What next?
 
-1. Set up your own Kubernetes cluster locally (with Minikube), in the cloud (with GKE), or install it yourself on AWS
+1. Set up your own Kubernetes cluster locally (with [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)), in the cloud (with [Google Container Engine](https://cloud.google.com/container-engine/)), or [install it yourself on AWS](https://www.datawire.io/guide/infrastructure/setting-kubernetes-aws/).
 
 2. Use [http://forge.sh](http://forge.sh?utm_source=katacoda&utm_medium=tutorial&utm_campaign=tutorial) to deploy your own source code into your Kubernetes installation
 

@@ -8,6 +8,12 @@ Once you have the account, set up your Docker instance with the appropriate cred
 
 `docker login`{{execute}}
 
+In order to push the Docker image to Docker Hub, we need to create a tag for the Docker image that contains our Docker repository name. By default, that repository is our user name.
+
+`export DOCKER_USER=YOUR_USERNAME_HERE`{{execute}}
+
+`docker tag hello-webapp:v1 $DOCKER_USER/hello-webapp:v1`{{execute}}
+
 Then, we can push the image we just created to Docker Hub:
 
-`docker push hello-webapp:v1`{{execute}}
+`docker push $DOCKER_USER/hello-webapp:v1`{{execute}}

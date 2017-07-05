@@ -4,7 +4,7 @@ A container contains 1) a compiled version of your source code and 2) any/all ru
 
 In this tutorial, we're going to use Docker as our container format. We've created a simple web application in Python, the `hello-webapp`. To package the webapp as a Docker container, we create a `Dockerfile`.
 
-We've created a `Dockerfile` for you, so just type to see its contents:
+We've created a `Dockerfile` for you, so just type the following commands to see its contents:
 
 `cd hello-webapp`{{execute}}
 

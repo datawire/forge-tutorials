@@ -8,7 +8,7 @@ Luckily, [Forge](http://forge.sh?utm_source=katacoda&utm_medium=tutorial&utm_cam
 
 `forge setup`{{execute}}
 
-Enter your Docker Hub credentials. Now, type:
+Use the default registry supplied, enter in your Docker Hub username/password, and use your username as the organization (the default). Now, type:
 
 `forge deploy`{{execute}}
 

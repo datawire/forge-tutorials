@@ -14,11 +14,21 @@ We can see the services running:
 
 `kubectl get services`{{execute}}
 
-And then if we send an HTTP request to the EXTERNAL-IP address listed for the `hello-webapp`:
+## Accessing the cluster
 
-`curl $WEBAPP_IP`{{execute}}
+Now, we want to send an HTTP request to the service. Most Kubernetes services are not exposed to the Internet, for obvious reasons. So we need to be able to access services that are running in the cluster directly. One way to do this is with port-forward.
 
-Note that you may have to wait a moment for Kubernetes to allocate an external IP.
+To set up port-forwarding, we need to first get the name of the pod that is running the container. (A pod is a grouping of containers. In this tutorial, we only deploy 1 container per pod, so we use them interchangeably. You can read more about pods [here](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/).)
+
+`kubectl get pods`{{execute}}
+
+Now, set up the port forward. HINT: kubectl supports tab completion, so if you type the first few letters of the pod name and then [TAB], it will automatically fill in the full name of the pod.
+
+`kubectl port-forward $POD_NAME 8080:8080 &`{{execute}}
+
+We can now send an HTTP request to the service:
+
+`curl localhost:8080`{{execute}}
 
 You'll see the "Hello, World" message again. Congratulations, you've got your service running in Kubernetes!
 

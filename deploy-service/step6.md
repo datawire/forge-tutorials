@@ -14,7 +14,11 @@ Use the default registry supplied, enter in your Docker Hub username/password, a
 
 Forge will automatically build your Docker container (based on your `Dockerfile`), push the container to your Docker registry of choice, build a `deployment.yaml` file for you that points to your image, and then deploy the container into Kubernetes.
 
-Now, if we just send a request to our container, we'll see that we have a new welcome message:
+This process will take a few moments as Kubernetes terminates the existing container and swaps in the new code. Check on the status of the update:
+
+`kubectl get pods`{{execute}}
+
+This command will list the pods (which are logical groupings of containers), and you should see a hello-webapp pod terminating, and new hello-webapp initializing. Once the new hello-webapp pod says "Running", we can send a request to our container, and we'll see that we have a new welcome message:
 
 `curl $WEBAPP_IP`
 

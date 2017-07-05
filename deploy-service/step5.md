@@ -1,6 +1,6 @@
 Now, let's actually get this service running in Kubernetes. We're going to need to update our `deployment.yaml` file to point to the image for our particular service. For the purposes of this exercise, we've templated our deployment file with the variable IMAGE_URL, which we'll then instantiate with a `sed` command:
 
-`sed -i -e 's@IMAGE_URL@'"registry.hub.docker.com/$DOCKER_USER/hello-webapp:v1"'@' deployment.yaml`{{execute}}
+`sed -i -e 's@IMAGE_URL@'"$DOCKER_USER/hello-webapp:v1"'@' deployment.yaml`{{execute}}
 
 (f you run `cat deployment.yaml`{{execute}} you'll see that your specific Docker repository is now in the `deployment.yaml` file.)
 

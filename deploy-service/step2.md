@@ -4,8 +4,8 @@ Let's run the container:
 
 `docker run -d -p 80:8080 hello-webapp:v1`{{execute}}
 
-(This command runs the container, and maps the container's port 8080 to the localhost port 80.) We can verify that the webapp is running successfully:
+(This command runs the container, and maps the container's port 8080 to the hosts port 80.) We can verify that the webapp is running successfully:
 
-`curl localhost`{{execute}}
+`curl host01`{{execute}}
 
-(We're now sending an HTTP request to port 80 on localhost, which then maps to the 8080 in the container.)
+(We're now sending an HTTP request to port 80 on host01, which then maps to the 8080 in the container.)

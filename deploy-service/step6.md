@@ -8,7 +8,15 @@ Luckily, [Forge](http://forge.sh?utm_source=katacoda&utm_medium=tutorial&utm_cam
 
 `forge setup`{{execute}}
 
-Use the default registry supplied, enter in your Docker Hub username/password, and use your username as the organization (the default). Now, type:
+To setup Forge, enter the URL for our Docker Registry: `[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
+
+Enter the username for the Registry, in this case `root`{{execute}}
+
+Enter the organization, again `root`{{execute}}
+
+Finally, enter `root`{{execute}}
+
+With Forge configured, type:
 
 `forge deploy`{{execute}}
 
@@ -18,14 +26,12 @@ This process will take a few moments as Kubernetes terminates the existing conta
 
 `kubectl get pods`{{execute}}
 
-You should see the original hello-webapp pod terminating, and a new hello-webapp initializing. We'll set up a new port-forward:
+As previously, obtain the NodePort assigned to our deployment.
 
-`kubectl port-forward $NEW_POD_NAME 8000:8080`{{execute}}
-
-(Don't forget about tab completion! We're also mapping to localhost:8000, because we already have a port-forward taking over localhost:8080. In a non-tutorial situation, you should just kill that process.)
+`export PORT=$(kubectl get svc hello-webapp -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')`
 
 Now, let's check out our new welcome message:
 
-`curl localhost:8000`{{execute}}
+`curl host01:$PORT`{{execute}}
 
 Congratulations! You've applied the basic concepts necessary for you to develop and deploy source code into Kubernetes.

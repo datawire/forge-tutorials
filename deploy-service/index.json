@@ -1,6 +1,6 @@
 {
-  "title": "Deploying a service onto Kubernetes",
-  "description": "How to get from source code to running service in Kubernetes",
+  "title": "Deploying a service from source onto Kubernetes",
+  "description": "How to get from source to running service in Kubernetes",
   "time": "15 minutes",
   "details": {
     "steps": [

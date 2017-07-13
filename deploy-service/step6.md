@@ -10,11 +10,11 @@ Luckily, [Forge](http://forge.sh?utm_source=katacoda&utm_medium=tutorial&utm_cam
 
 To setup Forge, enter the URL for our Docker Registry: `[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com`{{execute}}
 
-Enter the username for the Registry, in this case `root`{{execute}}
+Enter the username for the Registry, in this case `root`{{execute}}.
 
-Enter the organization, again `root`{{execute}}
+Enter the organization, again `root`{{execute}}.
 
-Finally, enter `root`{{execute}}
+Finally, enter `root`{{execute}} for the password.
 
 With Forge configured, type:
 

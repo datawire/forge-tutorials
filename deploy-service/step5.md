@@ -28,7 +28,7 @@ When the service was deployed, a dynamic NodePort was assigned to the Pod. This 
 
 Store the port assigned as a variable for later use.
 
-`export PORT=$(kubectl get svc hello-webapp -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')`
+`export PORT=$(kubectl get svc hello-webapp -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')`{{execute}}
 
 We can now send an HTTP request to the service:
 

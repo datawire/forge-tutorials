@@ -13,7 +13,7 @@
     ],
     "intro": {
       "text": "intro.md",
-      "courseBase": "course-base.sh",
+      "courseData": "course-base.sh",
       "code": "env-init.sh"
     },
     "finish": {

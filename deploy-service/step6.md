@@ -28,7 +28,7 @@ This process will take a few moments as Kubernetes terminates the existing conta
 
 As previously, obtain the NodePort assigned to our deployment.
 
-`export PORT=$(kubectl get svc hello-webapp -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')`
+`export PORT=$(kubectl get svc hello-webapp -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')`{{execute}}
 
 Now, let's check out our new welcome message:
 

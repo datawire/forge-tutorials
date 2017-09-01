@@ -32,13 +32,13 @@ In order for a developer (or team) to be safely self-sufficient, the developer n
 
 1. A Layer 7 proxy. Since communication between services and end users happen at L7, it's critical to be able to manage and observe L7 traffic.
 2. A development environment. The developer needs a way to develop and deploy code, as well as manage operational infrastructure such as the L7 proxy and Kubernetes, in a way that's idiomatic to the development process.
-3. A control plane. The control plane operates in real-time, and tells the dashboard when a code change is adversely impacting the application and gives the developer the information and controls to quickly address the situation.
+3. A control plane/dashboard. The control plane operates in real-time, and tells the developer when a code change is adversely impacting the application and gives the developer the information and controls to quickly address the situation.
 
 Together, a platform with these components, plus Kubernetes, can give developers the ability to be safely self-sufficient.
 
 # Blackbird
 
-Blackbird is an open source platform for developing microservices on Kubernetes. Blackbird uses Envoy as the L7 proxy, and adds a local development environment and control plane.
+Blackbird is an open source platform for developing microservices on Kubernetes. Blackbird uses Envoy as the L7 proxy, and adds a local development environment and control plane/dashboard.
 
 Blackbird's goal is to enable microservice teams to have fast development workflows. We see microservices being developed in three different stages:
 
